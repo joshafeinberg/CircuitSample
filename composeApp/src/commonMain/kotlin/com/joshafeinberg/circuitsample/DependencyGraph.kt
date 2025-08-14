@@ -28,7 +28,7 @@ internal interface MyDepGraph {
 annotation class ParentScope
 
 
-@DependencyGraph(scope = ParentScope::class, isExtendable = true)
+@DependencyGraph(scope = ParentScope::class)
 internal interface ParentGraph {
 
     @DependencyGraph.Factory

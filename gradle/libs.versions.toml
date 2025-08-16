@@ -4,11 +4,11 @@ circuit = "0.30.0"
 composeHotReload = "1.0.0-alpha11"
 composeMultiplatform = "1.8.2"
 junit = "4.13.2"
-kotlin = "2.2.0"
+kotlin = "2.2.10"
 kotlinx-coroutines = "1.10.2"
-metro = "0.6.0-SNAPSHOT"
+metro = "0.6.0"
 
-plugin-ksp = "2.2.0-2.0.2"
+plugin-ksp = "2.2.10-2.0.2"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }

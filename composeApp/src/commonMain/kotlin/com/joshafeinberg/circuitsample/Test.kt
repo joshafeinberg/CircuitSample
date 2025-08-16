@@ -19,8 +19,8 @@ data class TestScreenState(val text: String) : CircuitUiState
 
 @CircuitInject(TestScreen::class, AppScope::class)
 @Composable
-fun TestScreen(modifier: Modifier) {
-    Text("TestScreen")
+fun TestScreen(modifier: Modifier, state: TestScreenState) {
+    Text(state.text)
 }
 
 @Inject

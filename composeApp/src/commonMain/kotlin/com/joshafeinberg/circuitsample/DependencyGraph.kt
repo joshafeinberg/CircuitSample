@@ -4,21 +4,22 @@ import com.slack.circuit.foundation.Circuit
 import com.slack.circuit.runtime.presenter.Presenter
 import com.slack.circuit.runtime.ui.Ui
 import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.ContributesGraphExtension
 import dev.zacsweers.metro.ContributesTo
 import dev.zacsweers.metro.DependencyGraph
+import dev.zacsweers.metro.GraphExtension
 import dev.zacsweers.metro.Multibinds
 import dev.zacsweers.metro.Provides
 import dev.zacsweers.metro.Scope
 import dev.zacsweers.metro.SingleIn
 import kotlin.jvm.JvmSuppressWildcards
 
-@ContributesGraphExtension(AppScope::class)
+@GraphExtension(AppScope::class)
 internal interface MyDepGraph {
 
     val circuit: Circuit
 
-    @ContributesGraphExtension.Factory(ParentScope::class)
+    @ContributesTo(ParentScope::class)
+    @GraphExtension.Factory
     fun interface Factory {
         fun create(): MyDepGraph
     }
